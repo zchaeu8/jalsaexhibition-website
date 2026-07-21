@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prophecy &amp; Persia — National Outreach Exhibition</title>
+<meta name="description" content="Prophecy &amp; Persia: Cyrus, Islam &amp; the Imam Mahdi. A National Outreach exhibition by the Ahmadiyya Muslim Community UK, with a guided audio tour in eleven languages.">
+<meta name="theme-color" content="#16234B">
+<meta name="author" content="Ahmadiyya Muslim Community UK — Department for Outreach &amp; Public Relations">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prophecy &amp; Persia — National Outreach Exhibition">
+<meta property="og:description" content="Cyrus, Islam &amp; the Imam Mahdi. Walk the exhibition with a guided audio tour in eleven languages, on your own phone.">
+<meta property="og:image" content="https://prophecyandpersia.org/assets/img/og-image.jpg">
+<meta property="og:url" content="https://prophecyandpersia.org/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#/" aria-label="Prophecy and Persia — home">
+      <img src="assets/logo/emblem_512.png" alt="Ahmadiyya Muslim Community UK emblem">
+      <span class="bt"><b>Prophecy &amp; Persia</b><span>National Outreach · 2026</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#/" data-view="home">Home</a>
+      <a href="#/posters" data-view="gallery">The Boards</a>
+      <a href="#/p/prophecy-and-persia" data-view="poster">Audio Tour</a>
+      <a href="#/previous" data-view="previous">Previous Years</a>
+      <a href="#/about" data-view="about">About</a>
+    </nav>
+    <button class="lang-btn" id="hdrLangBtn" aria-label="Choose language">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg>
+      <span id="hdrLang">EN</span>
+    </button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main id="app"><!-- views render here --></main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="fx">
+      <img src="assets/logo/emblem_512.png" alt="emblem">
+      <div class="ft">
+        <b>Prophecy &amp; Persia</b>
+        <span>Ahmadiyya Muslim Community UK · Outreach &amp; Public Relations</span>
+      </div>
+      <nav class="fnav" aria-label="Footer">
+        <a href="#/">Home</a>
+        <a href="#/posters">Boards</a>
+        <a href="#/previous">Archive</a>
+        <a href="#/about">About</a>
+      </nav>
+    </div>
+    <div class="fcredit">Artefacts by courtesy of the Barlas Foundation — Razwan Baig.</div>
+    <div class="copyr">© <span id="yr">2026</span> Ahmadiyya Muslim Community UK. The audio guide runs privately on your device.</div>
+  </div>
+</footer>
+
+<!-- mini sticky player -->
+<div class="mini" id="mini">
+  <div class="inner">
+    <button class="mplay" id="miniPlay" aria-label="Play or pause"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v13.72c0 .8.87 1.28 1.54.84l10.3-6.86a1 1 0 000-1.68L9.54 4.3A1 1 0 008 5.14z"/></svg></button>
+    <div class="mmeta" id="miniOpen" role="button" tabindex="0">
+      <div class="l" id="miniLang">Audio Guide</div>
+      <div class="t" id="miniTitle">—</div>
+    </div>
+    <button class="mbtn" id="miniOpenBtn" aria-label="Open board" onclick="document.getElementById('miniOpen').click()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <div class="mbar" id="miniBar"></div>
+  </div>
+</div>
+
+<!-- language / overlay -->
+<div class="overlay" id="overlay" aria-modal="true" role="dialog"></div>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" aria-modal="true" role="dialog"></div>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

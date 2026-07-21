@@ -1,0 +1,54 @@
+{
+  "exhibition": {
+    "title": "Prophecy & Persia",
+    "subtitle": "Cyrus, Islam & the Imam Mahdi",
+    "year": 2026,
+    "organiser": "Ahmadiyya Muslim Community UK",
+    "department": "Department for Outreach & Public Relations",
+    "credit": "Artefacts courtesy of Razwan Baig, Barlas Foundation"
+  },
+  "sections": [
+    {"id": "welcome", "title": "Welcome", "kicker": "Prophecy & Persia"},
+    {"id": "s1", "title": "Cyrus", "kicker": "Section One", "subtitle": "Unravelling the True Identity of Dhul-Qarnain"},
+    {"id": "s2", "title": "The Rise of Islam", "kicker": "Section Two"},
+    {"id": "s3", "title": "The Promised Messiah", "kicker": "Section Three"}
+  ],
+  "boards": [
+    {"order": 1,  "id": "QUOTE_BOARD_01",       "slug": "prophecy-and-persia",          "section": "welcome", "type": "title",   "orig": "Section 0 + 1 for review (new)/QUOTE BOARD 01.png",   "title": "Prophecy & Persia"},
+
+    {"order": 2,  "id": "SECTION_HEADER_01",     "slug": "cyrus",                         "section": "s1", "type": "header",  "orig": "Section 0 + 1 for review (new)/SECTION HEADER 01.png", "title": "Cyrus"},
+    {"order": 3,  "id": "CONTENT_BOARD_01",      "slug": "promise-of-the-holy-quran",     "section": "s1", "type": "content", "orig": "Section 0 + 1 for review (new)/CONTENT BOARD 01.png",  "title": "The Promise of the Holy Quran"},
+    {"order": 4,  "id": "CONTENT_BOARD_01_2_",   "slug": "ancient-persia-zoroastrianism", "section": "s1", "type": "content", "orig": "Section 0 + 1 for review (new)/CONTENT BOARD 01 (2).png", "title": "Ancient Persia & Zoroastrianism"},
+    {"order": 5,  "id": "CONTENT_BOARD_01_3_",   "slug": "cyrus-ii-persian-emperor",      "section": "s1", "type": "content", "orig": "Section 0 + 1 for review (new)/CONTENT BOARD 01 (3).png", "title": "Cyrus II, Persian Emperor"},
+    {"order": 6,  "id": "QUOTE_BOARD_01_3_",     "slug": "the-cyrus-cylinder",            "section": "s1", "type": "quote",   "orig": "Section 0 + 1 for review (new)/QUOTE BOARD 01 (3).png", "title": "The Cyrus Cylinder"},
+    {"order": 7,  "id": "CONTENT_BOARD_01_4_",   "slug": "who-was-dhul-qarnain",          "section": "s1", "type": "content", "orig": "Section 0 + 1 for review (new)/CONTENT BOARD 01 (4).png", "title": "Who Was Dhul-Qarnain?"},
+    {"order": 8,  "id": "CONTENT_BOARD_01_update","slug": "the-story-of-dhul-qarnain",    "section": "s1", "type": "content", "orig": "Section 0 + 1 for review (new)/CONTENT BOARD 01 update.png", "title": "The Story of Dhul-Qarnain"},
+    {"order": 9,  "id": "CONTENT_BOARD_01_5_",   "slug": "persian-king-israelite-savior", "section": "s1", "type": "content", "orig": "Section 0 + 1 for review (new)/CONTENT BOARD 01 (5).png", "title": "Persian King, Israelite Saviour"},
+    {"order": 10, "id": "QUOTE_BOARD_01_4_",     "slug": "the-prophecy-of-isaiah",        "section": "s1", "type": "quote",   "orig": "Section 0 + 1 for review (new)/QUOTE BOARD 01 (4).png", "title": "The Prophecy of Isaiah"},
+    {"order": 11, "id": "CONTENT_BOARD_01_6_",   "slug": "false-claims-of-cyrus-death",   "section": "s1", "type": "content", "orig": "Section 0 + 1 for review (new)/CONTENT BOARD 01 (6).png", "title": "False Claims of Cyrus' Death"},
+    {"order": 12, "id": "CONTENT_BOARD_01_7_",   "slug": "cyrus-confronts-gog-and-magog", "section": "s1", "type": "content", "orig": "Section 0 + 1 for review (new)/CONTENT BOARD 01 (7).png", "title": "Cyrus Confronts Gog & Magog"},
+    {"order": 13, "id": "CONTENT_BOARD_01_8_",   "slug": "the-wall-of-cyrus",             "section": "s1", "type": "content", "orig": "Section 0 + 1 for review (new)/CONTENT BOARD 01 (8).png", "title": "The Wall of Cyrus the Great"},
+    {"order": 14, "id": "QUOTE_BOARD_01_2_",     "slug": "the-reality-of-faith",          "section": "s1", "type": "quote",   "orig": "Section 0 + 1 for review (new)/QUOTE BOARD 01 (2).png", "title": "The Reality of Faith"},
+
+    {"order": 15, "id": "SECTION_HEADER_02",     "slug": "the-rise-of-islam",             "section": "s2", "type": "header",  "orig": "Sections 2 & 3 for review/SECTION HEADER 02.png", "title": "The Rise of Islam"},
+    {"order": 16, "id": "CONTENT_BOARD_02",      "slug": "an-age-of-darkness",            "section": "s2", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02.png", "title": "An Age of Darkness"},
+    {"order": 17, "id": "CONTENT_BOARD_02_2_",   "slug": "a-new-dawn",                    "section": "s2", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (2).png", "title": "A New Dawn"},
+    {"order": 18, "id": "CONTENT_BOARD_02_3_",   "slug": "the-prophecy-of-rome",          "section": "s2", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (3).png", "title": "The Prophecy of Rome"},
+    {"order": 19, "id": "CONTENT_BOARD_02_4_",   "slug": "the-persian-companion",         "section": "s2", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (4).png", "title": "The Persian Companion"},
+    {"order": 20, "id": "QUOTE_BOARD_02",        "slug": "faith-in-the-pleiades",         "section": "s2", "type": "quote",   "orig": "Sections 2 & 3 for review/QUOTE BOARD 02.png", "title": "Faith in the Pleiades"},
+    {"order": 21, "id": "CONTENT_BOARD_02_5_",   "slug": "persian-downfall",              "section": "s2", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (5).png", "title": "Persian Downfall"},
+    {"order": 22, "id": "CONTENT_BOARD_02_6_",   "slug": "islamic-tolerance",             "section": "s2", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (6).png", "title": "Islamic Tolerance"},
+    {"order": 23, "id": "CONTENT_BOARD_02_7_",   "slug": "persian-renaissance",           "section": "s2", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (7).png", "title": "Persian Renaissance"},
+    {"order": 24, "id": "QUOTE_BOARD_02_2_",     "slug": "o-sons-of-persia",              "section": "s2", "type": "quote",   "orig": "Sections 2 & 3 for review/QUOTE BOARD 02 (2).png", "title": "O Sons of Persia"},
+
+    {"order": 25, "id": "SECTION_HEADER_03",     "slug": "the-promised-messiah",          "section": "s3", "type": "header",  "orig": "Sections 2 & 3 for review/SECTION HEADER 03.png", "title": "The Promised Messiah"},
+    {"order": 26, "id": "CONTENT_BOARD_02_8_",   "slug": "a-new-dark-age",                "section": "s3", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (8).png", "title": "A New Dark Age"},
+    {"order": 27, "id": "CONTENT_BOARD_02_9_",   "slug": "the-persian-messiah",           "section": "s3", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (9).png", "title": "The Persian Messiah"},
+    {"order": 28, "id": "QUOTE_BOARD_02_3_",     "slug": "prophecy-of-the-promised-messiah","section": "s3", "type": "quote", "orig": "Sections 2 & 3 for review/QUOTE BOARD 02 (3).png", "title": "A Prophecy Fulfilled"},
+    {"order": 29, "id": "CONTENT_BOARD_02_10_",  "slug": "gog-and-magog",                 "section": "s3", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (10).png", "title": "Gog & Magog"},
+    {"order": 30, "id": "CONTENT_BOARD_02_11_",  "slug": "dhul-qarnain-revealed",         "section": "s3", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (11).png", "title": "Dhul-Qarnain"},
+    {"order": 31, "id": "CONTENT_BOARD_02_12_",  "slug": "the-wall-of-islam",             "section": "s3", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (12).png", "title": "The Wall of Islam"},
+    {"order": 32, "id": "CONTENT_BOARD_02_13_",  "slug": "the-palace-prophecy",           "section": "s3", "type": "content", "orig": "Sections 2 & 3 for review/CONTENT BOARD 02 (13).png", "title": "The Palace Prophecy"},
+    {"order": 33, "id": "QUOTE_BOARD_02_4_",     "slug": "a-blessed-dream",               "section": "s3", "type": "quote",   "orig": "Sections 2 & 3 for review/QUOTE BOARD 02 (4).png", "title": "A Blessed Dream"}
+  ]
+}

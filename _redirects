@@ -1,0 +1,3 @@
+# The app uses hash-based routing (#/...), so every path is served by index.html.
+# This single rule keeps deep links and refreshes working on Netlify.
+/*    /index.html   200
