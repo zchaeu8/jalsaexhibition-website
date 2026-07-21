@@ -2117,5 +2117,45 @@ window.SITE = {
    "pdf": null
   }
  ],
- "audioOverrides": {}
+ "audioOverrides": {
+  "promise-of-the-holy-quran": {
+   "ar": "audio/ar/promise-of-the-holy-quran.mp3",
+   "de": "audio/de/promise-of-the-holy-quran.mp3",
+   "en": "audio/en/promise-of-the-holy-quran.mp3",
+   "es": "audio/es/promise-of-the-holy-quran.mp3",
+   "fr": "audio/fr/promise-of-the-holy-quran.mp3",
+   "ja": "audio/ja/promise-of-the-holy-quran.mp3",
+   "ms": "audio/ms/promise-of-the-holy-quran.mp3",
+   "pt": "audio/pt/promise-of-the-holy-quran.mp3",
+   "sw": "audio/sw/promise-of-the-holy-quran.mp3",
+   "ur": "audio/ur/promise-of-the-holy-quran.mp3",
+   "zh": "audio/zh/promise-of-the-holy-quran.mp3"
+  },
+  "prophecy-and-persia": {
+   "ar": "audio/ar/prophecy-and-persia.mp3",
+   "de": "audio/de/prophecy-and-persia.mp3",
+   "en": "audio/en/prophecy-and-persia.mp3",
+   "es": "audio/es/prophecy-and-persia.mp3",
+   "fr": "audio/fr/prophecy-and-persia.mp3",
+   "ja": "audio/ja/prophecy-and-persia.mp3",
+   "ms": "audio/ms/prophecy-and-persia.mp3",
+   "pt": "audio/pt/prophecy-and-persia.mp3",
+   "sw": "audio/sw/prophecy-and-persia.mp3",
+   "ur": "audio/ur/prophecy-and-persia.mp3",
+   "zh": "audio/zh/prophecy-and-persia.mp3"
+  },
+  "the-cyrus-cylinder": {
+   "ar": "audio/ar/the-cyrus-cylinder.mp3",
+   "de": "audio/de/the-cyrus-cylinder.mp3",
+   "en": "audio/en/the-cyrus-cylinder.mp3",
+   "es": "audio/es/the-cyrus-cylinder.mp3",
+   "fr": "audio/fr/the-cyrus-cylinder.mp3",
+   "ja": "audio/ja/the-cyrus-cylinder.mp3",
+   "ms": "audio/ms/the-cyrus-cylinder.mp3",
+   "pt": "audio/pt/the-cyrus-cylinder.mp3",
+   "sw": "audio/sw/the-cyrus-cylinder.mp3",
+   "ur": "audio/ur/the-cyrus-cylinder.mp3",
+   "zh": "audio/zh/the-cyrus-cylinder.mp3"
+  }
+ }
 };
