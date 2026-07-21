@@ -283,8 +283,15 @@
                   boards.filter(function (b) { return b.section === s.id; })[0];
       var img = first ? first.image : "";
       var n = boards.filter(function (b) { return b.section === s.id; }).length;
-      return '<a class="sec-card" href="#/p/' + first.slug + '">' +
-        '<div class="bg" style="background-image:url(' + img + ')"></div>' +
+      // Section 3 is a portrait of the Promised Messiah. Show the whole photo uncropped
+      // ("contain") on the poster's maroon so nothing — turban included — is ever cut.
+      var isPortrait = s.id === "s3";
+      var bgStyle = isPortrait
+        ? "background-image:url(assets/img/the-promised-messiah_portrait.jpg);background-size:contain;background-position:center;background-repeat:no-repeat"
+        : "background-image:url(" + img + ");background-position:center";
+      var cardStyle = isPortrait ? ' style="background:#69172d"' : "";
+      return '<a class="sec-card"' + cardStyle + ' href="#/p/' + first.slug + '">' +
+        '<div class="bg" style="' + bgStyle + '"></div>' +
         '<div class="c"><span class="k">' + esc(s.kicker) + '</span>' +
         '<h3>' + esc(s.title) + '</h3><p>' + (s.subtitle ? esc(s.subtitle) : n + ' boards') + '</p></div></a>';
     }).join("");
