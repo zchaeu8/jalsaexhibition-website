@@ -20,7 +20,7 @@ except ImportError:
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WEB = os.path.dirname(HERE)
-BASE = (sys.argv[1] if len(sys.argv) > 1 else "https://prophecyandpersia.org").rstrip("/")
+BASE = (sys.argv[1] if len(sys.argv) > 1 else "https://www.prophecyandpersia.com").rstrip("/")
 
 man = json.load(open(os.path.join(WEB, "assets/js/manifest.json"), encoding="utf-8"))
 boards = sorted(man["boards"], key=lambda b: b["order"])

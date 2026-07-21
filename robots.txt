@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://prophecyandpersia.org/sitemap.xml
+Sitemap: https://www.prophecyandpersia.com/sitemap.xml

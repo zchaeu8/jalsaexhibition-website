@@ -40,13 +40,13 @@ no server code — you can put it online in about five minutes.
 
 ## 2. Connect your own domain
 
-1. Register your domain (e.g. `prophecyandpersia.org`) with any registrar.
+1. Register your domain (e.g. `www.prophecyandpersia.com`) with any registrar.
 2. In Netlify: **Domain settings → Add a custom domain**, enter it, and follow the
    prompts. Netlify will either give you nameservers to set at your registrar, or a
    CNAME/A record to add. HTTPS is switched on automatically (free).
 3. **Find-and-replace the placeholder domain.** The site works fine without this,
    but for correct social-share previews and QR codes, replace every occurrence of
-   `prophecyandpersia.org` with your real domain in these files:
+   `www.prophecyandpersia.com` with your real domain in these files:
    - `index.html` (the `og:image` / `og:url` tags)
    - `robots.txt`
    Then re-deploy.
