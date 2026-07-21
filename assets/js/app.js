@@ -201,11 +201,12 @@
     }
   };
 
-  var pendingAutoplay = false;
+  var pendingAutoplay = false, keepScroll = null;
   function gotoAdjacent(dir, autoplay) {
     var b = AC.board; if (!b) return;
     var nb = boards[b._i + dir]; if (!nb) return;
     if (autoplay) pendingAutoplay = true;
+    keepScroll = window.scrollY;            // keep the page where it was
     location.hash = "#/p/" + nb.slug;
   }
 
@@ -496,8 +497,8 @@
     refresh(AC.state());
 
     btnPlay.onclick = function () { primeAudio(); AC.toggle(); };
-    document.getElementById("btnNext").onclick = function () { if (next) location.hash = "#/p/" + next.slug; };
-    document.getElementById("btnPrev").onclick = function () { if (prev) location.hash = "#/p/" + prev.slug; };
+    document.getElementById("btnNext").onclick = function () { if (next) { keepScroll = window.scrollY; location.hash = "#/p/" + next.slug; } };
+    document.getElementById("btnPrev").onclick = function () { if (prev) { keepScroll = window.scrollY; location.hash = "#/p/" + prev.slug; } };
     document.getElementById("btnLang").onclick = openLangSheet;
     document.getElementById("btnSpeed").onclick = cycleSpeed;
     document.getElementById("chkAuto").onchange = function (e) { state.autonext = e.target.checked; localStorage.setItem("pp_autonext", state.autonext ? "1" : "0"); };
@@ -516,7 +517,8 @@
         "</strong>. You can still read the guide below, or switch language. On many phones you can add voices in Settings › Accessibility › Spoken Content.";
     } else { vn.classList.remove("show"); }
 
-    window.scrollTo(0, 0);
+    if (keepScroll != null) { window.scrollTo(0, keepScroll); keepScroll = null; }
+    else window.scrollTo(0, 0);
     this_currentBoard = b;
     if (pendingAutoplay) { pendingAutoplay = false; primeAudio(); AC.play(); }
   }
@@ -631,10 +633,15 @@
     var lb = document.getElementById("lightbox");
     lb.innerHTML = '<button class="lx" id="lbX">✕</button>' +
       '<img src="assets/img/' + b.slug + '.jpg" alt="' + esc(b.title) + '">' +
-      '<div class="lhint">Pinch or scroll to read every word · tap ✕ to close</div>';
+      '<div class="lhint">Tap image to zoom in · tap ✕ to close</div>';
     lb.classList.add("show");
     document.body.style.overflow = "hidden";
     lb.querySelector("#lbX").onclick = closeLightbox;
+    var img = lb.querySelector("img");
+    img.onclick = function (e) {   // toggle fit-to-screen <-> full size for reading
+      e.stopPropagation();
+      lb.classList.toggle("zoomed");
+    };
     lb.onclick = function (e) { if (e.target === lb) closeLightbox(); };
   }
   function closeLightbox() {

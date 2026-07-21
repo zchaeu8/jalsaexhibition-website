@@ -68,9 +68,7 @@ AUDIO_DIR = os.path.join(WEB_ROOT, "audio")
 # Voice choices.  A calm, warm female narrator across every language.
 # ---------------------------------------------------------------------------
 # Edge (Microsoft) neural voices — verified present via `edge-tts --list-voices`.
-# One female ("f") and one male ("m") voice per language.  The narrator gender
-# alternates board-by-board (see edge_gender_for) so a listener in any single
-# language hears a mix of male and female voices across the tour.
+# One female ("f") and one male ("m") voice per language.
 EDGE_VOICES = {
     "en": {"f": "en-GB-SoniaNeural",   "m": "en-GB-RyanNeural"},
     "ur": {"f": "ur-PK-UzmaNeural",    "m": "ur-PK-AsadNeural"},    # native ur-PK
@@ -85,12 +83,18 @@ EDGE_VOICES = {
     "ms": {"f": "ms-MY-YasminNeural",  "m": "ms-MY-OsmanNeural"},
 }
 
+# One consistent narrator gender per language across EVERY board (no chop/change).
+# English is male; the rest are female. Edit a value to flip a language.
+EDGE_GENDER = {
+    "en": "m",
+    "ur": "f", "ar": "f", "es": "f", "fr": "f", "de": "f",
+    "pt": "f", "sw": "f", "zh": "f", "ja": "f", "ms": "f",
+}
 
-def edge_gender_for(board):
-    """Alternate narrator gender by board order: odd = female, even = male.
-    The same board is the same gender in every language, so the tour reads
-    female, male, female, male … for every listener regardless of language."""
-    return "f" if int(board.get("order", 0)) % 2 == 1 else "m"
+
+def edge_voice_for(lang):
+    """The single voice used for this language on every board."""
+    return EDGE_VOICES[lang][EDGE_GENDER[lang]]
 
 # Google language codes per our site language codes.
 GOOGLE_LANG = {
@@ -327,7 +331,6 @@ def main():
         slug = b["slug"]
         if want_boards and slug not in want_boards:
             continue
-        gender = edge_gender_for(b)
         for lang, sc in b.get("scripts", {}).items():
             if want_langs and lang not in want_langs:
                 continue
@@ -342,7 +345,7 @@ def main():
                 continue
             try:
                 if args.engine == "edge":
-                    vlabel = EDGE_VOICES[lang][gender]
+                    vlabel = edge_voice_for(lang)
                     synth_edge(text, vlabel, edge_rate, outfile)
                 else:
                     vlabel = synth_google(text, lang, args.api_key, google_rate,

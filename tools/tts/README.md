@@ -50,17 +50,16 @@ script in `data.js` and re-run with `--force`.
   It auto-picks the most natural voice per language (Chirp3-HD → Neural2 →
   Wavenet → Standard).
 
-### Narrator voices (male/female mix)
+### Narrator voices (one voice per language)
 
-Each language has a **female** and a **male** neural voice in `EDGE_VOICES` at
-the top of `generate_audio.py`. The narrator **alternates by board order** —
-odd-numbered boards use the female voice, even-numbered boards the male voice
-(`edge_gender_for`). The same board is the same gender in every language, so
-every listener hears female, male, female, male … across the tour.
+Each language uses a **single consistent voice across every board** — no
+chopping and changing. `EDGE_VOICES` (top of `generate_audio.py`) holds a
+female and a male neural voice per language, and `EDGE_GENDER` picks which one
+each language uses. Currently **English = male, every other language = female**.
 
-To change this: swap voices in `EDGE_VOICES`, or edit `edge_gender_for` (e.g.
-make it always `"f"` for a single-gender narrator, or key off `board["section"]`
-instead of order). Then re-run with `--force`.
+To change a language's narrator: flip its entry in `EDGE_GENDER` (e.g.
+`"ur": "m"`), or swap the voice name in `EDGE_VOICES`, then re-run with
+`--force`.
 
 ## Getting a Google API key (for `--engine google`)
 

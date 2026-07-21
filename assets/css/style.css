@@ -314,7 +314,10 @@ section.band.tight{padding:52px 0}
 /* lightbox */
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(10,13,28,.94);display:none;align-items:center;justify-content:center;overflow:auto;padding:20px}
 .lightbox.show{display:flex}
-.lightbox img{max-width:none;width:auto;height:auto;box-shadow:var(--shadow-lg);border-radius:6px}
+/* default: whole board fits the screen; tap to zoom to full size for reading */
+.lightbox img{max-width:100%;max-height:calc(100vh - 40px);width:auto;height:auto;object-fit:contain;box-shadow:var(--shadow-lg);border-radius:6px;cursor:zoom-in}
+.lightbox.zoomed{align-items:flex-start;justify-content:flex-start}
+.lightbox.zoomed img{max-width:none;max-height:none;width:auto;height:auto;border-radius:0;cursor:zoom-out}
 .lightbox .lx{position:fixed;top:18px;right:20px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;display:grid;place-items:center;font-size:1.4rem;z-index:2}
 .lightbox .lhint{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:.78rem;color:rgba(255,255,255,.7)}
 
