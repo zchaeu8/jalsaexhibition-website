@@ -68,19 +68,29 @@ AUDIO_DIR = os.path.join(WEB_ROOT, "audio")
 # Voice choices.  A calm, warm female narrator across every language.
 # ---------------------------------------------------------------------------
 # Edge (Microsoft) neural voices — verified present via `edge-tts --list-voices`.
+# One female ("f") and one male ("m") voice per language.  The narrator gender
+# alternates board-by-board (see edge_gender_for) so a listener in any single
+# language hears a mix of male and female voices across the tour.
 EDGE_VOICES = {
-    "en": "en-GB-SoniaNeural",
-    "ur": "ur-PK-UzmaNeural",     # native Pakistani Urdu
-    "ar": "ar-SA-ZariyahNeural",
-    "es": "es-ES-ElviraNeural",
-    "fr": "fr-FR-DeniseNeural",
-    "de": "de-DE-KatjaNeural",
-    "pt": "pt-PT-RaquelNeural",
-    "sw": "sw-KE-ZuriNeural",
-    "zh": "zh-CN-XiaoxiaoNeural",
-    "ja": "ja-JP-NanamiNeural",
-    "ms": "ms-MY-YasminNeural",
+    "en": {"f": "en-GB-SoniaNeural",   "m": "en-GB-RyanNeural"},
+    "ur": {"f": "ur-PK-UzmaNeural",    "m": "ur-PK-AsadNeural"},    # native ur-PK
+    "ar": {"f": "ar-SA-ZariyahNeural", "m": "ar-SA-HamedNeural"},
+    "es": {"f": "es-ES-ElviraNeural",  "m": "es-ES-AlvaroNeural"},
+    "fr": {"f": "fr-FR-DeniseNeural",  "m": "fr-FR-HenriNeural"},
+    "de": {"f": "de-DE-KatjaNeural",   "m": "de-DE-ConradNeural"},
+    "pt": {"f": "pt-PT-RaquelNeural",  "m": "pt-PT-DuarteNeural"},
+    "sw": {"f": "sw-KE-ZuriNeural",    "m": "sw-KE-RafikiNeural"},
+    "zh": {"f": "zh-CN-XiaoxiaoNeural", "m": "zh-CN-YunxiNeural"},
+    "ja": {"f": "ja-JP-NanamiNeural",  "m": "ja-JP-KeitaNeural"},
+    "ms": {"f": "ms-MY-YasminNeural",  "m": "ms-MY-OsmanNeural"},
 }
+
+
+def edge_gender_for(board):
+    """Alternate narrator gender by board order: odd = female, even = male.
+    The same board is the same gender in every language, so the tour reads
+    female, male, female, male … for every listener regardless of language."""
+    return "f" if int(board.get("order", 0)) % 2 == 1 else "m"
 
 # Google language codes per our site language codes.
 GOOGLE_LANG = {
@@ -317,6 +327,7 @@ def main():
         slug = b["slug"]
         if want_boards and slug not in want_boards:
             continue
+        gender = edge_gender_for(b)
         for lang, sc in b.get("scripts", {}).items():
             if want_langs and lang not in want_langs:
                 continue
@@ -331,8 +342,8 @@ def main():
                 continue
             try:
                 if args.engine == "edge":
-                    synth_edge(text, EDGE_VOICES[lang], edge_rate, outfile)
-                    vlabel = EDGE_VOICES[lang]
+                    vlabel = EDGE_VOICES[lang][gender]
+                    synth_edge(text, vlabel, edge_rate, outfile)
                 else:
                     vlabel = synth_google(text, lang, args.api_key, google_rate,
                                           outfile)
